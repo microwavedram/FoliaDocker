@@ -4,15 +4,15 @@ services:
         tty: true
         ports:
             - 25565:25565
-        container_name: endkind-folia
+        container_name: cloud-folia
         volumes:
-            - endkind-folia:/folia
+            - cloud-folia:/folia
         environment:
-            - MAX_RAM=3G
+            - MEMORY=4G
             - MINECRAFT_EULA=true
         restart: always
-        image: endkind/folia:latest
-        cpus: '0.1'
+        image: cloud-folia:latest
+        cpus: 0.1
 
 volumes:
-    endkind-folia:
+    cloud-folia:
